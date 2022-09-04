@@ -23,7 +23,7 @@ jobs:
       - name: install  packages
         run: pip install -r src/requirements.txt
       - name: generate profile
-        run: echo '{"pdc_username":"${{secrets.pdc_username}}","pdc_password":"${{secrets.pdc_password}}","email_address":"${{secrets.email_address}}","email_authcode":"${{secrets.email_authcode}}"}' > src/profile.json
+        run: echo '{"pdc_username":"${{secrets.pdc_username}}","pdc_password":"${{secrets.pdc_password}}","email_addressfrom":"${{secrets.email_addressfrom}}","email_addressto":"${{secrets.email_addressto}}","email_authcode":"${{secrets.email_authcode}}"}' > src/profile.json
       - name: execute script
         working-directory: src
         run: python -B health.py
