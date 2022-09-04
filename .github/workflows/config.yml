@@ -13,6 +13,15 @@ jobs:
   Login:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout branch
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+          cache: "pip"
+      - name: install  packages
+        run: pip install -r src/requirements.txt
       - name: change directory
         run: cd src
       - name: generate profile
