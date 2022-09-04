@@ -25,6 +25,6 @@ jobs:
       - name: change directory
         run: cd src
       - name: generate profile
-        run: echo '{"pdc_username":"${{secrets.pdc_username}}","pdc_password":"${{secrets.pdc_password}}","email_address":"${{secrets.email_address}}","email_address":"${{secrets.email_authcode}}"}'' > profile.json
+        run: echo '{"pdc_username":"${{secrets.pdc_username}}","pdc_password":"${{secrets.pdc_password}}","email_address":"${{secrets.email_address}}","email_address":"${{secrets.email_authcode}}"}' > profile.json
       - name: execute script
         run: python -B health.py
