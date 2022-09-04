@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 
 profile = json.load(open("./profile.json"))
 email_address = profile["email_address"]
-eamil_authcode = profile["eamil_authcode"]
+eamil_authcode = profile["email_authcode"]
 
 
 def send_qqemail_to_myself(message, subject):
