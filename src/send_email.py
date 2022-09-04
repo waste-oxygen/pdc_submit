@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 
 profile = json.load(open("./profile.json"))
 email_address = profile["email_address"]
-eamil_authcode = profile["email_authcode"]
+email_authcode = profile["email_authcode"]
 
 
 def send_qqemail_to_myself(message, subject):
@@ -15,7 +15,7 @@ def send_qqemail_to_myself(message, subject):
         msg['From'] = email_address
         msg['To'] = email_address
         service = smtplib.SMTP_SSL("smtp.qq.com", 465)
-        service.login(msg['From'], eamil_authcode)
+        service.login(msg['From'], email_authcode)
         service.sendmail(msg['From'], msg['To'], msg.as_string())
         service.quit()
         return True
