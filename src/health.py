@@ -13,7 +13,7 @@ pdc_password = profile["pdc_password"]
 
 def sendMessage(msg):
     print(msg)
-    if send_qqemail_to_myself(msg, "健康打卡"):
+    if not send_qqemail_to_myself(msg, "健康打卡"):
         print("邮件发送失败")
 
 
