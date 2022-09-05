@@ -9,7 +9,7 @@ email_addressto = profile["email_addressto"]
 email_authcode = profile["email_authcode"]
 
 
-def send_qqemail_to_myself(message, subject):
+def send_qqemail(message, subject):
     try:
         msg = MIMEText(message)
         msg['Subject'] = subject

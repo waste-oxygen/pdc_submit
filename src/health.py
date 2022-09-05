@@ -3,7 +3,7 @@ import time
 import traceback
 import requests
 from bs4 import BeautifulSoup
-from send_email import send_qqemail_to_myself
+from send_email import send_qqemail
 
 
 profile = json.load(open("./profile.json"))
@@ -12,8 +12,8 @@ pdc_password = profile["pdc_password"]
 
 
 def sendMessage(msg):
-    #print(msg)
-    if not send_qqemail_to_myself(msg, "健康打卡"):
+    # print(msg)
+    if not send_qqemail(msg, "健康打卡"):
         print("邮件发送失败")
 
 
